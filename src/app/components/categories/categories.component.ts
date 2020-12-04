@@ -9,6 +9,7 @@ export class CategoriesComponent implements OnInit {
   public title : string = "food world";
   public description : string = "go back to home page";
   public topBar : Array<string> = ['user','cart'];
+  public attr:string = 'blue';
   public topBarList : any[] = [{
     tag: 'home',
     descrp : 'home'

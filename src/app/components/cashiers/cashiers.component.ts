@@ -8,15 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class CashiersComponent implements OnInit {
 
   public name : string = "Jiayang";
-
   public cashierInfo : object = {
     name : "xxx",
     age : '25'
   }
-
   public isOnline : number = 0;
+  public today : any = new Date;
 
-  constructor() { }
+  constructor() { 
+    console.log(this.today);
+  }
 
   ngOnInit(): void {
   }

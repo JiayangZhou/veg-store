@@ -46,6 +46,19 @@ export class ShelvesComponent{
       ]
     }
     ]
+    public itemNum : number = 0;
+
+    run(){
+      alert('cart emptied');
+    }
+
+    getItem(){
+      
+    }
+
+    setItem(){
+      
+    }
 
     getTitle(){
         return this.title;
