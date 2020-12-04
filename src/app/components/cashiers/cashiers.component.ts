@@ -7,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CashiersComponent implements OnInit {
 
-  name  = "Jiayang";
+  public name : string = "Jiayang";
+
+  public cashierInfo : object = {
+    name : "mili",
+    age : '25'
+  }
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
