@@ -1,3 +1,4 @@
+import { StorageService } from './services/storage.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core'; // core component
 import { FormsModule }   from '@angular/forms'; // data binding
@@ -8,8 +9,9 @@ import { AppComponent } from './app.component'; // root component
 import { ShelvesComponent } from './components/shelves/shelves.component';
 import { CashiersComponent } from './components/cashiers/cashiers.component';
 import { CategoriesComponent } from './components/categories/categories.component';
-import { CustomersComponent } from './components/customers/customers.component';
+import { SearchComponent } from './components/search/search.component';
 import { OrdersComponent } from './components/orders/orders.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,7 @@ import { OrdersComponent } from './components/orders/orders.component';
     ShelvesComponent,
     CashiersComponent,
     CategoriesComponent,
-    CustomersComponent,
+    SearchComponent,
     OrdersComponent
   ],
   imports: [ // dependency
@@ -25,7 +27,7 @@ import { OrdersComponent } from './components/orders/orders.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [], // service
+  providers: [StorageService], // service, quite like a hash map to me
   bootstrap: [AppComponent]
 })
 export class AppModule { }
