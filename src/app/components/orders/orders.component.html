@@ -1,0 +1,34 @@
+<h2>order sheet</h2>
+
+<div class="veg_list">
+    <ul>
+        <li> customer: 
+            <input type = "text" id="customer" [(ngModel)]="orderInfo.customer"/>
+        </li>
+
+
+        <li> gender:
+            <input type = "radio" value = "1" id="gender" [(ngModel)]="orderInfo.gender"/>
+            <label for = "gender1"> Mr.</label>
+            <input type = "radio" value = "2" id="gender" [(ngModel)]="orderInfo.gender"/>
+            <label for = "gender2"> Mrs.</label>
+        </li>
+
+        <li> address:
+            <select name = "city" id = "city" [(ngModel)]="orderInfo.city">
+                <option [value] = "item" *ngFor="let item of orderInfo.citiesList">
+                    {{item}}
+                </option>
+            </select>
+        </li>
+    </ul>
+
+    <button (click) = "doSubmit()">
+        submit
+    </button>
+
+    <pre>
+        {{orderInfo | json}}
+    </pre>
+
+</div>

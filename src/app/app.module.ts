@@ -9,6 +9,7 @@ import { ShelvesComponent } from './components/shelves/shelves.component';
 import { CashiersComponent } from './components/cashiers/cashiers.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { CustomersComponent } from './components/customers/customers.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CustomersComponent } from './components/customers/customers.component';
     ShelvesComponent,
     CashiersComponent,
     CategoriesComponent,
-    CustomersComponent
+    CustomersComponent,
+    OrdersComponent
   ],
   imports: [ // dependency
     BrowserModule,
