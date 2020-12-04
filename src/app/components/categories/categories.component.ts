@@ -23,6 +23,7 @@ export class CategoriesComponent implements OnInit {
     tag: 'cart',
     descrp : 'cart'
   }]
+  public flag : boolean = true;
 
   constructor() { }
 

@@ -1,7 +1,10 @@
 <h2>{{ getTitle() }}</h2>
 <ul>
-    <li *ngFor = "let shelf of shelves">
-        <h5>{{shelf.cate}}</h5>
+    <li *ngFor = "let shelf of shelves;let i = index">
+        <span *ngIf="i==5">next page</span>
+        <span>
+            <h3>{{shelf.cate}}</h3>
+        </span>
 
         <ol>
             <li *ngFor = "let item of shelf.list">

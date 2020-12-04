@@ -7,12 +7,9 @@ import { Component, OnInit } from '@angular/core';
   template : ``
 })
 export class ShelvesComponent{
-    title = "Shelves here";
-
+    public title = "Shelves here";
     //shelves = ["green veg", "yello veg", "red veg"];
-    content = "we have all colors";
-
-
+    public content = "empty your cart";
     public shelves : any[] = [
     {
       cate: "root",
@@ -49,9 +46,11 @@ export class ShelvesComponent{
       ]
     }
     ]
+
     getTitle(){
         return this.title;
     }
 
+    
    
 }

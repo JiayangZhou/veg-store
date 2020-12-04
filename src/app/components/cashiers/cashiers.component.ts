@@ -10,9 +10,11 @@ export class CashiersComponent implements OnInit {
   public name : string = "Jiayang";
 
   public cashierInfo : object = {
-    name : "mili",
+    name : "xxx",
     age : '25'
   }
+
+  public isOnline : number = 0;
 
   constructor() { }
 

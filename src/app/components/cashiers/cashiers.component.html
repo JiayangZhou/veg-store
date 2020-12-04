@@ -1,1 +1,13 @@
 <h4>I am today's cashier {{name}}</h4>
+
+<div [ngSwitch]="isOnline">
+    <div *ngSwitchCase="0" [ngClass]="{'gray': true}">
+        offline
+    </div>
+    <div *ngSwitchCase="1" [ngClass]="{'gray': true}">
+        online
+    </div>
+    <div *ngSwitchCase="2">busy</div>
+    <div *ngSwitchDefault>left</div>
+</div>
+
