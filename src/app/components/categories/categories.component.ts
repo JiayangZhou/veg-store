@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { StorageService } from './../../services/storage.service';
 
 @Component({
   selector: 'app-categories',
@@ -26,13 +27,22 @@ export class CategoriesComponent implements OnInit {
   }]
   public flag : boolean = true;
 
-  constructor() {
+  @ViewChild('myHome') myHome : any
+  constructor(public storage : StorageService) {
 
   }
 
   ngOnInit(): void {
-    let oBox : any = document.getElementById('box');
     
-  }
 
+  }
+  
+  ngAfterViewInit(): void{
+    //let oBox : any = document.getElementById('box');
+
+    this.myHome.nativeElement.style.height = '100px';
+    this.myHome.nativeElement.style.width = '100px';
+    this.myHome.nativeElement.style.background = 'pink';
+  }
+  
 }

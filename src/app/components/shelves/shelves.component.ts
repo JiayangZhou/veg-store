@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from './../../services/storage.service';
 
 @Component({
   selector: 'app-shelves',
@@ -47,9 +48,10 @@ export class ShelvesComponent{
     }
     ]
     public itemNum : number = 0;
-
+    constructor(public storage: StorageService) { }
     run(){
       alert('cart emptied');
+      this.storage.set('historyList',null);
     }
 
     getItem(){

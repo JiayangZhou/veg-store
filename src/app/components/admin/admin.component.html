@@ -1,1 +1,14 @@
-<p>admin works!</p>
+<p>admin page!</p>
+<li> orders:
+    <select id = "orderIDs">
+        <option [value] = "item" *ngFor="let item of orderIDs; let key = item;">
+            {{item}}
+        </option>
+    </select>
+    <textarea *ngFor="let order of orders">
+        {{order | json}}
+    </textarea>
+    <pre>
+        {{orderIDs | json}}
+    </pre>
+</li>

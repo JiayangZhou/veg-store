@@ -32,8 +32,8 @@ export class SearchComponent implements OnInit {
     this.storage.set("historyList",this.historyList);
   }
   deleteHistory(key : any){
-    if (this.historyList.indexOf(key) == this.historyList.length - 1)
-      this.historyList.splice(this.historyList.indexOf(key),1);
+    if (this.historyList.indexOf(key) == this.historyList.length)
+      this.historyList.splice(this.historyList.indexOf(key) - 1,1);
     else
       this.historyList.splice(this.historyList.indexOf(key) - 1,1);
     this.storage.set("historyList",this.historyList);

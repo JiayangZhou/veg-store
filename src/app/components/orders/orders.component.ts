@@ -13,17 +13,24 @@ export class OrdersComponent implements OnInit {
     gender : '1',
     citiesList : ['Stokcholm','Malmo','Gothenburg'],
     city: 'Stockholm',
-    orderDetail : []
+    orderDetail : [],
+    orderId : '0'
   }
 
   constructor(public storage: StorageService) { }
 
   ngOnInit(): void {
+    this.orderInfo = this.storage.get('orderInfo');
+    // this is talking with the component called search
     this.orderInfo.orderDetail = this.storage.get('historyList');
+  
   }
 
   doSubmit(){
     console.log(this.orderInfo);
+    this.orderInfo.orderId++;
+    this.storage.set('orderInfo',this.orderInfo);
+    
   }
 
 }

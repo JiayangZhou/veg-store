@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from './../../services/storage.service';
 
 @Component({
   selector: 'app-cashiers',
@@ -15,7 +16,7 @@ export class CashiersComponent implements OnInit {
   public isOnline : number = 1;
   public today : any = new Date;
 
-  constructor() { 
+  constructor(public storage : StorageService) { 
     console.log(this.today);
   }
 

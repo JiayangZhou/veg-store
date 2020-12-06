@@ -1,12 +1,20 @@
-<h3 [ngStyle]="{'color': attr}">food world store</h3>
-<div [title] = "description"> 
+<h3 [ngStyle]="{'color': attr}">Food World Store</h3>
+<!-- <div [title] = "description"> 
     home
-</div>
+</div> -->
 
 <div *ngIf="flag">
     <img width="100" height="90" src="assets/images/store.png" alt="store"/>
 </div>
 
-<div id = 'box'>
-
+<div>
+    <div #myHome id = 'home'>
+        home
+    </div>
+    <div #myUser id = 'user'>
+        user
+    </div>
+    <div #myCart id = 'cart'>
+        cart
+    </div>
 </div>
