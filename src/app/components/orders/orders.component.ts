@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from './../../services/storage.service';
 
 @Component({
   selector: 'app-orders',
@@ -11,12 +12,14 @@ export class OrdersComponent implements OnInit {
     customer : 'default',
     gender : '1',
     citiesList : ['Stokcholm','Malmo','Gothenburg'],
-    city: 'Stockholm'
+    city: 'Stockholm',
+    orderDetail : []
   }
 
-  constructor() { }
+  constructor(public storage: StorageService) { }
 
   ngOnInit(): void {
+    this.orderInfo.orderDetail = this.storage.get('historyList');
   }
 
   doSubmit(){

@@ -26,9 +26,13 @@ export class CategoriesComponent implements OnInit {
   }]
   public flag : boolean = true;
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
+    let oBox : any = document.getElementById('box');
+    
   }
 
 }

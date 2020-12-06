@@ -11,6 +11,7 @@ import { CashiersComponent } from './components/cashiers/cashiers.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { SearchComponent } from './components/search/search.component';
 import { OrdersComponent } from './components/orders/orders.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { OrdersComponent } from './components/orders/orders.component';
     CashiersComponent,
     CategoriesComponent,
     SearchComponent,
-    OrdersComponent
+    OrdersComponent,
+    AdminComponent
   ],
   imports: [ // dependency
     BrowserModule,

@@ -21,6 +21,12 @@
                 </option>
             </select>
         </li>
+
+        <li> cart:
+            <textarea id = "cart" [(ngModel)]="orderInfo.orderDetail">
+                
+            </textarea>
+        </li>
     </ul>
 
     <button (click) = "doSubmit()">

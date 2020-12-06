@@ -14,6 +14,10 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     // called when refresh
+    var list : any = this.storage.get('historyList');
+    if (list != null){
+      this.historyList = list;
+    }
   }
   keyDown(e:any){
     if(e.keyCode == 13){
@@ -25,8 +29,13 @@ export class SearchComponent implements OnInit {
       this.historyList.push(this.keyword);      
     }
     this.keyword ='';
+    this.storage.set("historyList",this.historyList);
   }
   deleteHistory(key : any){
-    this.historyList.splice(this.historyList.indexOf(key) - 1,1);
+    if (this.historyList.indexOf(key) == this.historyList.length - 1)
+      this.historyList.splice(this.historyList.indexOf(key),1);
+    else
+      this.historyList.splice(this.historyList.indexOf(key) - 1,1);
+    this.storage.set("historyList",this.historyList);
   }
 }
