@@ -21,5 +21,10 @@ export class CashiersComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.isOnline = this.storage.get('casherStatus');
   }
+
+  // run(){
+  //   alert('casher run');
+  // }
 }

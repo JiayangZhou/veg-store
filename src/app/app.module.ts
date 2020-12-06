@@ -12,6 +12,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { SearchComponent } from './components/search/search.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { TransitionComponent } from './components/transition/transition.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AdminComponent } from './components/admin/admin.component';
     CategoriesComponent,
     SearchComponent,
     OrdersComponent,
-    AdminComponent
+    AdminComponent,
+    TransitionComponent
   ],
   imports: [ // dependency
     BrowserModule,

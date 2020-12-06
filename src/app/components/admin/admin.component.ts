@@ -1,5 +1,5 @@
 import { templateJitUrl } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { StorageService } from './../../services/storage.service';
 
 @Component({
@@ -18,11 +18,15 @@ export class AdminComponent implements OnInit {
   }
   public orders : any[] = [];
   public orderIDs : any[] = [];
+  public casher : number = 0;
+  public casherStatus : any[] = [0,1,2];
+  // dom
+  @ViewChild('cashier') cashier : any;
   constructor(public storage : StorageService) { }
 
   ngOnInit(): void {
     this.orders = this.storage.get('orders');
-    this.orderIDs = this.storage.get('orderIDs');
+    this.orderIDs = this.storage.get('orderIDs'); 
     this.orderInfo = this.storage.get('orderInfo');
     let id : number = this.orderInfo.orderId;
     if (!this.orderIDs.includes(id) && id != null){
@@ -31,6 +35,9 @@ export class AdminComponent implements OnInit {
       this.storage.set('orders',this.orders); 
       this.storage.set('orderIDs',this.orderIDs);
     }
+  }
+  doChange(){
+     this.storage.set('casherStatus',this.casher);
   }
 
 }

@@ -1,7 +1,7 @@
 <p>admin page!</p>
 <li> orders:
     <select id = "orderIDs">
-        <option [value] = "item" *ngFor="let item of orderIDs; let key = item;">
+        <option [value] = "item" *ngFor="let item of orderIDs">
             {{item}}
         </option>
     </select>
@@ -10,5 +10,12 @@
     </textarea>
     <pre>
         {{orderIDs | json}}
-    </pre>
+    </pre> 
+    casher status:
+    <select id = "casherIDs" [(ngModel)]="casher">
+        <option [value] = "item" *ngFor="let item of casherStatus">
+            {{item}}
+        </option>
+    </select>
+    <button (click) = "doChange()">change</button>
 </li>
