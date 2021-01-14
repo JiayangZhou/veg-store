@@ -20,10 +20,13 @@ export class OrdersComponent implements OnInit {
   constructor(public storage: StorageService) { }
 
   ngOnInit(): void {
-    this.orderInfo = this.storage.get('orderInfo');
+    if (this.storage.get('orderInfo') != null){
+      this.orderInfo = this.storage.get('orderInfo');
+    }
     // this is talking with the component called search
-    this.orderInfo.orderDetail = this.storage.get('historyList');
-  
+    if (this.storage.get('orderInfo') != null){
+      this.orderInfo.orderDetail = this.storage.get('historyList');
+    }
   }
 
   doSubmit(){

@@ -13,7 +13,7 @@ export class CashiersComponent implements OnInit {
     name : "xxx",
     age : '25'
   }
-  public isOnline : number = 1;
+  public isOnline : number = 2;
   public today : any = new Date;
 
   constructor(public storage : StorageService) { 
