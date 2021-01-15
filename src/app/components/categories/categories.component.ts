@@ -45,4 +45,7 @@ export class CategoriesComponent implements OnInit {
     this.myHome.nativeElement.style.background = 'pink';
   }
   
+  run() : void{
+    console.log("this is run function from categories");
+  }
 }

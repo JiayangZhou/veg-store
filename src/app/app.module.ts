@@ -13,6 +13,7 @@ import { SearchComponent } from './components/search/search.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { TransitionComponent } from './components/transition/transition.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { TransitionComponent } from './components/transition/transition.componen
     SearchComponent,
     OrdersComponent,
     AdminComponent,
-    TransitionComponent
+    TransitionComponent,
+    HeaderComponent
   ],
   imports: [ // dependency
     BrowserModule,
