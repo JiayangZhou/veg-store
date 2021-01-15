@@ -1,4 +1,6 @@
 <p>child component header of categories component</p>
 <h4>{{title}} (passed from parent component)</h4>
 
-<button (click) = "getParentRun()">invoke parent's run function</button>
+<button (click) = "getParentRun()">invoke parent's run function via Input</button>
+
+<button (click) = "invokeParentRun()">invoke parent's run via Output</button>

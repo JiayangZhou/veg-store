@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -13,6 +13,8 @@ export class HeaderComponent implements OnInit {
 
   @Input() category : any; // passed the whole parent component
 
+  @Output() private outer1 = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -22,6 +24,11 @@ export class HeaderComponent implements OnInit {
     // child component running function from parent function
     this.run(); 
     this.category.run();
+  }
+
+  invokeParentRun() : void{
+    console.log("executed");
+    this.outer1.emit("child data");
   }
 
 }

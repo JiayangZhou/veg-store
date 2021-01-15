@@ -48,4 +48,8 @@ export class CategoriesComponent implements OnInit {
   run() : void{
     console.log("this is run function from categories");
   }
+
+  parentRun() : void{
+    console.log("parent is running from child");
+  }
 }
