@@ -45,7 +45,12 @@ export class AdminComponent implements OnInit {
     }
   }
   ngAfterViewInit() : void{
-    console.log("view child loaded");
+    var obj = {
+      name : "Alice"
+    };
+    console.log("null's type is: " + typeof null);
+    //console.log("view child loaded");
+    
   }
   
   doChange(){
